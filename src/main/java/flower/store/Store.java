@@ -7,7 +7,7 @@ import flower.filters.Filter;
 import flower.flowers.Item;
 
 public class Store {
-    List<Item> items;
+    private List<Item> items;
 
     public List<Item> search(Filter filter) {
         List<Item> foundItems = new ArrayList<>();

@@ -1,5 +1,6 @@
 package flower.flowers;
 
+import lombok.Getter;
 
 public enum FlowerColor {
     RED("#FF0000"),
@@ -7,9 +8,10 @@ public enum FlowerColor {
     BLACK("#000000"),
     WHITE("#FFFFFF");
 
-    public final String label;
+    @Getter
+    final String label;
 
-    private FlowerColor(String label) {
+    FlowerColor(String label) {
         this.label = label;
     }
 
