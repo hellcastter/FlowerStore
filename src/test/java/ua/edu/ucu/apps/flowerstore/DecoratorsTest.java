@@ -29,6 +29,8 @@ public class DecoratorsTest {
         item = new RibbonDecorator(item);
         item = new PaperDecorator(item);
 
+
+
         Assertions.assertEquals(653, item.getPrice());
     }
 }

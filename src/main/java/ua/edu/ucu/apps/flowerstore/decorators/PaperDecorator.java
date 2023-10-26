@@ -6,8 +6,10 @@ import ua.edu.ucu.apps.flowerstore.flowers.Item;
 @AllArgsConstructor
 public class PaperDecorator extends AbstractDecorator {
     private final Item item;
+    private final int decoratorPrice = 13;
+
     @Override
     public double getPrice() {
-        return 13 + item.getPrice();
+        return decoratorPrice + item.getPrice();
     }
 }

@@ -16,22 +16,22 @@ public class Order {
     @Getter
     private double price;
 
-    public void setPaymentStrategy(Payment payment) {
-        this.payment = payment;
+    public void setPaymentStrategy(Payment paymentMethod) {
+        this.payment = paymentMethod;
     }
 
-    public void setDeliveryStrategy(Delivery delivery) {
-        this.delivery = delivery;
+    public void setDeliveryStrategy(Delivery deliveryMethod) {
+        this.delivery = deliveryMethod;
     }
 
     void calculateTotalPrice() {
-        double price = 0;
+        double resultPrice = 0;
 
         for (Item item : items) {
-            price += item.getPrice();
+            resultPrice += item.getPrice();
         }
 
-        this.price = price;
+        this.price = resultPrice;
     }
 
     void addItem(Item item) {
@@ -46,8 +46,14 @@ public class Order {
 
     void processOrder() {
         System.out.printf("You have ordered %d items\n", items.size());
-        System.out.printf("You have chosen %s payment strategy", payment.getClass().getSimpleName());
-        System.out.printf("You have chosen %s delivery strategy", delivery.getClass().getSimpleName());
+        System.out.printf(
+                "You have chosen %s payment strategy",
+                payment.getClass().getSimpleName()
+        );
+        System.out.printf(
+                "You have chosen %s delivery strategy",
+                delivery.getClass().getSimpleName()
+        );
         System.out.printf("Total price %f UAH", price);
     }
 }

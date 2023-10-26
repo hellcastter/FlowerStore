@@ -22,7 +22,7 @@ public class FlowerController {
     @GetMapping("/list/")
     public List<Flower> getFlowers() {
         return flowerService.getFlowers();
-	}
+    }
 
     @PostMapping("/add/")
     public void addFlower(@RequestBody Flower flower) {

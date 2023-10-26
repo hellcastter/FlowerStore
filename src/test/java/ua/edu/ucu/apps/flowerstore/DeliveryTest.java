@@ -20,9 +20,13 @@ public class DeliveryTest {
 
     @BeforeEach
     public void init() {
-        items = new LinkedList<Item>();
-        items.add(new Flower(1, 80, 10, FlowerColor.RED, FlowerType.ROSE, "Red Rose"));
-        items.add(new Flower(2, 50, 10, FlowerColor.WHITE, FlowerType.TULIP, "White Tulip"));
+        items = new LinkedList<>();
+        items.add(
+                new Flower(1, 2, 2, FlowerColor.RED, FlowerType.ROSE, "Red Rose")
+        );
+        items.add(
+                new Flower(2, 2, 2, FlowerColor.WHITE, FlowerType.TULIP, "White Tulip")
+        );
     }
 
     @Test

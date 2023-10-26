@@ -4,11 +4,13 @@ import lombok.AllArgsConstructor;
 import ua.edu.ucu.apps.flowerstore.flowers.Item;
 
 @AllArgsConstructor
-public class RibbonDecorator extends AbstractDecorator{
+public class RibbonDecorator extends AbstractDecorator {
     private final Item item;
+    private final int decoratorPrice = 40;
+
 
     @Override
     public double getPrice() {
-        return 40 + item.getPrice();
+        return decoratorPrice + item.getPrice();
     }
 }
