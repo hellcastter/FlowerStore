@@ -1,11 +1,11 @@
-package flower.flowers;
+package ua.edu.ucu.apps.flowerstore.flowers;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FlowerBucket extends Item {
-    private List<FlowerPack> flowerPacks = new ArrayList<>(); 
+    private final List<FlowerPack> flowerPacks = new ArrayList<>();
 
     public void add(FlowerPack flowerPack) {
         this.flowerPacks.add(flowerPack);
@@ -20,5 +20,4 @@ public class FlowerBucket extends Item {
 
         return price;
     }
-    
 }

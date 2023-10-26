@@ -1,14 +1,15 @@
-package flower.store;
+package ua.edu.ucu.apps.flowerstore;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import ua.edu.ucu.apps.flowerstore.flowers.Flower;
+import ua.edu.ucu.apps.flowerstore.flowers.FlowerColor;
 
 import java.util.Random;
 
 import org.junit.jupiter.api.Assertions;
 
-import flower.flowers.Flower;
-import flower.flowers.FlowerColor;
 
 public class FlowerTest {
     private static final Random RANDOM_GENERATOR = new Random();

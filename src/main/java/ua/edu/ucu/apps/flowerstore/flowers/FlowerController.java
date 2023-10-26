@@ -1,14 +1,31 @@
 package ua.edu.ucu.apps.flowerstore.flowers;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/flower/")
 public class FlowerController {
-    @GetMapping("/tulip")
-	public Flower hello() {
-        return new Flower(45.6, 5.0, FlowerColor.RED, FlowerType.TULIP);
+    private final FlowerService flowerService;
+
+    @Autowired
+    public FlowerController(FlowerService flowerService) {
+        this.flowerService = flowerService;
+    }
+
+    @GetMapping("/list/")
+    public List<Flower> getFlowers() {
+        return flowerService.getFlowers();
 	}
+
+    @PostMapping("/add/")
+    public void addFlower(@RequestBody Flower flower) {
+        flowerService.add(flower);
+    }
 }

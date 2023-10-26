@@ -1,11 +1,11 @@
-package flower.store;
+package ua.edu.ucu.apps.flowerstore;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import flower.flowers.Flower;
-import flower.flowers.FlowerBucket;
-import flower.flowers.FlowerPack;
+import ua.edu.ucu.apps.flowerstore.flowers.Flower;
+import ua.edu.ucu.apps.flowerstore.flowers.FlowerBucket;
+import ua.edu.ucu.apps.flowerstore.flowers.FlowerPack;
 
 import org.junit.jupiter.api.Assertions;
 
