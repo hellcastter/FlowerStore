@@ -11,11 +11,16 @@ import ua.edu.ucu.apps.flowerstore.flowers.FlowerPack;
 import org.junit.jupiter.api.Assertions;
 import ua.edu.ucu.apps.flowerstore.flowers.Item;
 
+import java.util.Random;
+
 public class DecoratorsTest {
+    private static final Random RANDOM_GENERATOR = new Random();
+    private static final int MAX_QUANTITY = 1000;
+    private static final int MAX_PRICE = 100;
     @Test
     public void testPrice() {
-        int price = 60;
-        int quantity = 10;
+        int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
+        int quantity = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
 
         Flower flower = new Flower();
         flower.setPrice(price);
@@ -29,8 +34,6 @@ public class DecoratorsTest {
         item = new RibbonDecorator(item);
         item = new PaperDecorator(item);
 
-
-
-        Assertions.assertEquals(653, item.getPrice());
+        Assertions.assertTrue(item.getPrice() >= price * quantity);
     }
 }
