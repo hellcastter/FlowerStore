@@ -1,13 +1,12 @@
-GET http://localhost:8080/api/flower/list/
+GET https://evening-mesa-96335-55ff03eafae8.herokuapp.com/api/flower/list/
 
-###
-POST http://localhost:8080/api/flower/add/
+####
+POST http://localhost:8080/api/user/add/
 Content-Type: application/json
 
 {
-  "id": 2,
-  "sepalLength": 10,
-  "color": "WHITE",
-  "price": 100,
-  "flowerType": "TULIP"
+  "id":5,
+  "email":"test14@gmail.com",
+  "dob":"2017-11-11",
+  "age":6
 }
