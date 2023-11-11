@@ -1,10 +1,8 @@
 package ua.edu.ucu.apps.flowerstore.user;
 
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UserService {
